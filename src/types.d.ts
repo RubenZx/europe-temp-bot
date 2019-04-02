@@ -11,8 +11,25 @@ export interface NotifyUsers {
   chatid: number
 }
 
-export interface NotifyPayload {
+export interface User {
+  id: number
+  chatid: number
   city: string
-  temp: string
-  user: string
+}
+
+export interface Cities{
+  fecha: string
+  lon: string
+  zrh: string
+  ams: string
+  lis: string
+  ber: string
+  cdg: string
+  mow: string
+  mad: string
+}
+
+export interface NotifyPayload {
+  users: User[]
+  cities: Cities
 }
